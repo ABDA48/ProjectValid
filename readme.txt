@@ -1,5 +1,5 @@
 cmd> python main.py
-Two API :
+Two API build with FASTAPI:
   - ChatbotAPI
   - DeployementAPI
 
