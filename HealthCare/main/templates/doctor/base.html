@@ -1,0 +1,50 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Doctors{% endblock title %}</title>
+ <link rel="stylesheet" href="{% static 'css/doctor.css' %}">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-3 left">
+          {% block doctorProfile %}
+          <div class="image">
+             <img src="{{doctor.image}}" alt="" srcset="">
+             <h4>{{doctor.idname}}</h4>
+             <span>{{doctor.specialty}}</span>
+          </div>
+          {% endblock doctorProfile %}
+            
+                        <div class="update"> 
+               <div class="date">
+                 <h6>Thursday</h6>
+                 <h4>25 Apr</h4>
+                 <h6>2019</h6>
+               </div>
+               <span>></span>
+              </div>
+              <div class="list-actions">
+                <ul class="actions">
+                  <li><a href={% url 'doctorhome' id %} style="text-decoration: none; "><i class="fa fa-address-book-o" aria-hidden="true"></i>Appointment</a></li>
+                  <li> <a href="{% url 'doctorpatients' id %}" style="text-decoration: none;"><i class="fa fa-address-book-o" aria-hidden="true"></i> My patient</a></li>
+                  <li> <a href="#" style="text-decoration: none;"><i class="fa fa-address-book-o" aria-hidden="true"></i> Chat</a></li>
+                  <li><a href="#" style="text-decoration: none;"><i class="fa fa-address-book-o" aria-hidden="true"></i> Calls</a></li>
+                  <li><a href="#" style="text-decoration: none;"><i class="fa fa-address-book-o" aria-hidden="true"></i>Settings</a></li>
+                </ul>
+              </div>
+            
+         </div>
+         <div class="col-sm-9 right">
+           {% block right %}
+           
+           {% endblock right %}
+         </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+.left{
+  
+   
+    background-color: aliceblue;
+    padding: 20px;
+
+}
+.pat{
+    margin: 20px;
+}
+.pat:hover{
+transform: scale(1.1);
+}
+.right{
+  
+ padding: 20px;
+}
+.image{
+ 
+    padding-bottom: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    color: #000;;  
+
+}
+
+.image img{
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+}
+.update{
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+ 
+ border-top: 1px #000 solid;
+ border-bottom: 1px #000 solid;
+}
+.date{
+    width: 100%;
+}
+.list-actions{
+    margin-top: 20px;
+}
+.actions {
+ 
+    padding: 0;
+}
+ 
+.actions li{
+    list-style: none;
+    margin:10px;
+  
+   
+    
+}
+.actions li a i{
+    margin:5px;
+}
+.actions li a{
+    color: #000;;
+}
+.actions li a:hover{
+    color:green;
+    font-weight: 500;
+}
+.head{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 20px;
+}
+.time ul li{
+    display: inline-block;
+}
+.content-patient{
+    background-color: #fff;
+}
+
+.content-patient{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.image-patient{
+    padding-bottom: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+   ; 
+}
+.image-patient img{
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+}
+.act{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;   
+}
+.act div{
+ 
+    width: 150px;
+    padding: 5px;
+}
+.patient-head{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;   
+}
+
+.patient-head .pati {
+    width: 200px;
+    padding:10px;
+}
+
+.pati-div1{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;   
+}
+.name-patient img{
+    margin-bottom: 10px;
+    width:40px;
+    height:40px;
+    margin-right: 10px;
+}
+.name-patient{
+   
+    display: flex;
+    justify-content:left;
+    align-items: center;
+}
+ 
+/*
+  padding-bottom: 10px;
+ 
+ 
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  color: #fff;
+*/
+.forform{
+    width: 300px;
+    height: 300px;
+    margin:auto;
+    margin-top:20px;
+}
+.sub{
+color: aqua;
+}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}{{page_title}}{% endblock page_title %}
+{% block first %}
+<h2 class="text-light bg-dark " style="text-align: center;">
+    {{page_title}}
+</h2>
+<div class="container" >
+
+
+<table class="table table-striped" >
+    <thead>
+      <tr>
+        <th >name</th>
+        <th style="width:30px">definition</th>
+        <th>warnings</th>
+         
+        <th>prescription</th>
+        <th>effects</th>
+      </tr>
+    </thead>
+    <tbody >
+        {% for r in results %}
+      <tr>
+        <td >{{r.name}}</td>
+        <td>{{r.definition}}</td>
+        <td>{{r.warnings}}</td>
+        <td>{{r.prescription}}</td>
+        <td>{{r.effects}}</td>
+        <td>
+          <a href="{% url 'medicineedit' id=r.id%}" class="btn btn-danger btn-lg " role="button" aria-disabled="true">Edit</a>
+        </td>
+        <td>
+          <a href="{% url 'medicinedelete' id=r.id%}" class="btn btn-warning btn-lg " role="button" aria-disabled="true">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock first %}

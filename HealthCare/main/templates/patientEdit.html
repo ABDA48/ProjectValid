@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}{{page_title}}{% endblock page_title %}
+{% block first %}
+<h2 class="text-light bg-dark " style="text-align: center;">
+    {{page_title}}
+</h2>
+ <form action="{%url 'patientmanage' %}" method='POST'>
+   
+    {% csrf_token %}
+    
+     <input type="hidden" value="{{id}}" id="id" name='id' />
+    
+    
+    {{ form.as_p }}
+    <center>
+       <button class='btn btn-danger'>EDIT</button>
+        
+
+    </center>
+
+ </form>
+ 
+{% endblock first %}

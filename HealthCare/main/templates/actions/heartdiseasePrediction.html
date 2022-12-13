@@ -1,0 +1,95 @@
+{% extends 'actions/predictionDisease.html' %}
+{% load static %}
+
+  <!-- 
+age
+sex
+cp
+trestbps
+chol
+fbs
+restecg
+thalach
+exang
+oldpeak
+slope
+ca
+thal
+-->
+{% block second %}
+  <div class="container">
+    <div class="title">Prediction Heart Disease</div>
+    <div class="content">
+      <form action="{% url 'predictionheart'  %}" method='POST'>
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Age</span>
+            <input type="number" name="age" id="age">
+          </div>
+          <div class="input-box">
+            <span class="details">Sex</span>
+            <input type="number" name="sex" id="sex">
+          </div>
+          <div class="input-box">
+            <span class="details">Cp</span>
+            <input type="number" name="cp" id="cp">
+          </div>
+          <div class="input-box">
+            <span class="details">Trestbps</span>
+            <input type="number" name="trestbps" id="trestbps">
+          </div>
+          <div class="input-box">
+            <span class="details">chol</span>
+            <input type="number" name="chol" id="chol">
+          </div>
+          <div class="input-box">
+            <span class="details">Fbs</span>
+            <input type="number" name="fbs" id="fbs">
+          </div>
+          <div class="input-box">
+            <span class="details">Restecg</span>
+            <input type="number" name="restecg" id="restecg">
+          </div>
+
+          <div class="input-box">
+            <span class="details">thalach</span>
+            <input type="number" name="thalach" id="thalach">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Exang</span>
+            <input type="number" name="exang" id="exang">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Oldpeak</span>
+            <input type="number" name="oldpeak" id="oldpeak">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Slope</span>
+            <input type="number" name="slope" id="slope">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Ca</span>
+            <input type="number" name="ca" id="ca">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Thal</span>
+            <input type="number" name="thal" id="thal">
+          </div>
+
+        </div>
+     
+        <div class="button">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    
+        <center>{{result}}</center>
+    </div>
+{% endblock second %}
+ 

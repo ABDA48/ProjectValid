@@ -1,0 +1,160 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+    <title>Document</title>
+</head>
+<body style="display:inline-block ;">
+  <div class="hero">
+  <nav>
+    <img src="{% static 'images/logo.png' %}" class="logo">
+    <ul>
+        <li><a href="{% url 'prediction' %}">HOME</a></li>
+        <li><a href="{% url 'profile' %}">Profile</a></li>
+        <li><a href={% url 'patientchat' %}><button id="chatdoctor" class="btn btn-info" value="disease prediction">Doctor Chat</button>
+        </a></li>
+        <li><a href="#">Notification</a></li>
+      
+    </ul>
+    <img src="{% static 'images/user.png' %} " class="user-pic" onclick="toggleMenu()">
+
+    <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+            <div class="user-info">
+                <img src=" {% static 'images/user.png' %}" alt="" srcset="">
+                <h3>James Adrino</h3>
+            </div>
+            <hr>
+            <a href="#" class="sub-menu-link">
+                <img src="{% static 'images/profile.png' %} " alt="">
+                <p>Edit Profile</p>
+                <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="{% static 'images/setting.png' %} " alt="">
+                <p>Settings & Privacy</p>
+                <span>></span>
+            </a>
+            <a href="" class="sub-menu-link">
+                <img src="{% static 'images/help.png' %} " alt="">
+                <p>Help & Support</p>
+                <span>></span>
+            </a>
+            <a href="{% url 'logout' %}" class="sub-menu-link">
+                <img src="{% static 'images/logout.png' %} " alt="">
+                <p>Logout</p>
+                <span>></span>
+            </a>
+        </div>
+    </div>
+    </nav>  
+</div>
+
+<div class="msger">
+ <!-- 
+  <header class="msger-header">
+      <div class="msger-header-title">
+        <i class="fas fa-comment-alt"></i> Chatbot
+      </div>
+      <div class="msger-header-options">
+        <span><i class="fas fa-cog"></i></span>
+      </div>
+      
+    </header>
+  -->
+  <input id='room' type='hidden' value={{room}} />
+  <input id='username'type='hidden' value={{username}} />
+
+    <main id="ma" class="msger-chat">
+    <!--   
+      <div class="msg left-msg">
+        <div
+         class="msg-img"
+         style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+        ></div>
+  
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name">BOT</div>
+            <div class="msg-info-time">12:45</div>
+          </div>
+  
+          <div class="msg-text">
+            Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
+          </div>
+        </div>
+      </div>
+
+    
+      <div>
+    <h3>Choose which symptom do you have</h3>
+    <div class="row" >
+      <div class="col-sm-6 card"  style="margin:10px;">
+        <div class='contain'>
+
+          <input type="text" class="autocomplete-input" 
+          placeholder="Search symptoms"
+          name="country" id="country-input">
+          <ul class="autocomplete-list" id="country-list">
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="symptom">
+          <h3>Symptoms</h3>
+        <ul id='symptom-disease'>
+          
+        </ul>
+        <input type="button" class='btn btn-primary'value="Predict" id="send-symptom">
+        </div>
+      </div>
+    </div>
+    <div class="question">
+
+    </div>
+    <div class="result">
+      
+      </div>
+
+  </div>
+    -->
+
+    </main>
+  
+    
+       
+        <div class="msger-inputarea" >
+        {% csrf_token %}
+        <button type="submit" class="msger-send-btn">File</button>
+        <button type="submit" class="msger-send-btn">voice</button>
+      <input type="text" name="message" id="message" class="msger-input" placeholder="Enter your message...">
+      <button id='forsend' type="submit" class="msger-send-btn">Send</button>
+        </div> 
+ 
+    
+    
+    
+      </div> 
+      
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+<script src="{% static 'js/scriptchat.js' %}"></script>
+
+</body>
+<script>
+  let submenu=document.getElementById("subMenu");
+
+  function toggleMenu(){
+    submenu.classList.toggle("open-menu");
+
+  }
+
+</script>
+</html>
