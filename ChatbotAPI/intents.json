@@ -1,0 +1,87 @@
+{"intents": [
+  {"tag": "greeting",
+   "patterns": ["Hi there", "Hello How are you", "Hi","Hey", "Hello"],
+   "responses": ["Hello, how are you today", "Hi, How is your health", "Hi there, how can I help?"],
+   "context": [""]
+  },
+  {"tag": "goodbye",
+   "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+   "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+   "context": [""]
+  },
+  {"tag": "thanks",
+   "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+   "responses": ["Happy to help!", "Any time!", "My pleasure"],
+   "context": [""]
+  },
+  {"tag": "noanswer",
+   "patterns": [],
+   "responses": ["Sorry, can't understand you ,what disease do you what to talk about", "Please give me more info", "Not sure I understand"],
+   "context": [""]
+  },
+  {"tag": "options",
+   "patterns": ["How you could help me?", "What help you provide?", "How you can be helpful?"],
+   "responses": ["I can tell you the cause,the prevention ,the treatment and the medicine to cure any disease that you have"],
+   "context": [""]
+  },
+
+  {"tag": "cause",
+  "patterns": ["I have ","what is the cause of", "why i have ","list all the causes of ","what cause"],
+  "responses": ["cause"],
+  "context": [""]
+ },
+ {"tag": "prevention",
+ "patterns": ["how to prevent", "what is the prevention of","what is the prevention for","list all the prevention for","How should I prevention"],
+ "responses": ["prevention"],
+ "context": [""]
+},
+{"tag": "medicine",
+ "patterns": ["what medicine should I take to treat ", "what is the medicine for","list all the medicine for","How should I cure","what medicine should I take to treat"],
+ "responses": ["medicine"],
+ "context": [""]
+},
+{"tag": "treatment",
+"patterns": ["what are the treatment for ", "how to treat ","list all the treatment for","How should I treat","what medicine should I take to treat"],
+"responses": ["treatment"],
+"context": [""]
+},
+{"tag": "state",
+"patterns": ["I am not well today ", "I am  sick ","I don't feel very well","I have a disease"],
+"responses": ["Oh, I am sorry to hear that, what happen to you","oh that is not good what happen"],
+"context": [""]
+},
+{"tag": "notknowing",
+"patterns": ["I don't know ", "I have no idea ","it is a mistery ","I am not a doctor,how sould I know"],
+"responses": ["Can you discribe to me, what happen to you","oh that is not good what your symptoms"],
+"context": [""]
+},
+{"tag": "accept",
+"patterns": ["yes", "sure ","defenetely","yeah","I would like that"],
+"responses": ["ok"," thanks for trusting me","ok let see !"],
+"context": [""]
+},{"tag": "refuse",
+"patterns": ["no", "not sure ","defenetely not","nope"],
+"responses": ["refuse"],
+"context": [""]
+},
+{
+"tag": "prescription",
+"patterns": ["how should I use this medicine ", "give me a prescription for this medicine","I would like to have a prescription","can you prescribe for me this medicine"],
+"responses": ["prescription"],
+"context": [""]
+},
+   {
+"tag": "effects",
+"patterns": ["what are the side effects of this medicine ", "If i overdose what happen","should I be carefull for this medicine"],
+"responses": ["effects"],
+"context": [""]
+},
+{
+  "tag": "services",
+  "patterns": ["what are the available services ", "list all the services ","what services can you do for me"],
+  "responses": ["The services are diabetes, jaundice, hepatitis b,hepatitis d,typhoid,hypoglycemia,asthma,heart attack,osteoarthristis,aids,allergy"],
+  "context": [""]
+  }
+  ]
+}
+
