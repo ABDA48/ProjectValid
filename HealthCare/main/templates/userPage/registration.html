@@ -1,0 +1,71 @@
+{% load static %}
+<!-- Designined by CodingLab - youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration </title>
+    <link rel="stylesheet" href="{% static 'css/styleregistration.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="{% url 'registration'  %}" method='POST'>
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            {{form.fullname}}
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            {{form.username}}
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            {{form.email}}
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            {{form.phone}}
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            {{form.password1}}
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            {{form.password2}}
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" value='male'>
+          <input type="radio" name="gender" id="dot-2" value='female'>
+       
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+       
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+
+
+ 
+
+  </div>
+
+</body>
+</html>

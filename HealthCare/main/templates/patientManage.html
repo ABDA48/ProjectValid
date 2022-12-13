@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}{{page_title}}{% endblock page_title %}
+{% block first %}
+<h2 class="text-light bg-dark " style="text-align: center;">
+    {{page_title}}
+</h2>
+<div class="container" >
+
+
+<table class="table table-striped" >
+    <thead>
+      <tr>
+        <th>image</th>
+        <th >name</th>
+        <th>weight</th>
+        
+       
+      </tr>
+    </thead>
+    <tbody >
+        {% for r in results %}
+      <tr>
+       
+        <td class="image-patient" style="width:20px;height:20px"><img src="{{r.image.url}}" width='100%'></td>
+        <td >{{r.profile}}</td>
+        <td>{{r.weight}}</td>
+        <td>
+          <a href="{% url 'patientedit' id=r.id%}" class="btn btn-danger btn-lg " role="button" aria-disabled="true">Edit</a>
+        </td>
+        <td>
+          <a href="{% url 'patientdelete' id=r.id%}" class="btn btn-warning btn-lg " role="button" aria-disabled="true">Delete</a>
+        </td>
+      
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock first %}

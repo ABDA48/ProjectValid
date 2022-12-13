@@ -1,0 +1,61 @@
+{% extends 'doctor/base.html' %}
+{% load static %}
+ 
+
+
+
+
+
+{% block right %}
+<div class="head">
+    <div class="title">
+       <h3>APPOINTMENTS </h3>
+       <span>You have following appointments today</span>
+    </div>
+    <div class="time">
+        <ul>
+            <li><i class="fa fa-address-book-o" aria-hidden="true"></i></li>
+            <li><i class="fa fa-address-book-o" aria-hidden="true"></i></li>
+            <li><i class="fa fa-address-book-o" aria-hidden="true"></i></li>
+        </ul>
+        <h2>
+            8:43 AM
+        </h2>
+    </div>
+ </div>
+ <div class="patient">
+    <div class="row">
+
+        {% for tapp in todayappointment %}
+        <div class="pat col-sm-5 card">
+            <span style="text-align: right;">{{tapp.time}}</span>
+            <div class="content-patient">
+               <div>
+                   <h6>{{tapp.name}} ,<span> {{tapp.age}}</span></h6>
+                   {{tapp.disease}}
+               </div>
+               <div class="image-patient">
+                   <img src="{{tapp.image}}" alt="">
+               </div>
+              
+            </div>
+            <div class="act">
+               <div >
+                <a href="#" style="text-decoration:none; color:#000"><i class="fa fa-address-book-o" aria-hidden="true"></i>Chat</a>
+               </div>
+               <div>
+                   <a href="#" style="text-decoration:none; color:#000;"><i class="fa fa-address-book-o" aria-hidden="true"></i>Calls</a>
+               </div>
+             </div>
+            
+           </div>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock right %}       
+            
+     
+           
+         
+     

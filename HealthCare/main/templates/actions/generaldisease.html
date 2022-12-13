@@ -1,0 +1,38 @@
+{% extends 'actions/predictionDisease.html' %}
+{% load static %}
+
+{% block second %}
+
+    
+<div class="contain"> 
+ 
+    <input type="text" class="autocomplete-input" 
+    placeholder="Search Symptoms"
+    name="country" id="country-input">
+    
+    <ul class="autocomplete-list" id="country-list">
+
+    </ul>
+   
+
+</div>
+
+<div class="symptom">
+  <h3>Symptoms</h3>
+<ul id='symptom-disease'>
+  
+</ul>
+<input type="button" class='btn btn-primary'value="Predict" id="send-symptom">
+</div>
+ 
+<div class="question">
+
+</div>
+<div class="result">
+  </div>
+
+{{result}}
+
+<div>
+ 
+{% endblock %}
