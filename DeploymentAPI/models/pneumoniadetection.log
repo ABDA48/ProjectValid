@@ -1,0 +1,9 @@
+1673.1s 1 Result is Normal
+1678.7s 2 /opt/conda/lib/python3.7/site-packages/traitlets/traitlets.py:2758: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+1678.7s 3 FutureWarning,
+1678.7s 4 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+1679.1s 5 [NbConvertApp] Writing 1949161 bytes to __notebook__.ipynb
+1681.1s 6 /opt/conda/lib/python3.7/site-packages/traitlets/traitlets.py:2758: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+1681.1s 7 FutureWarning,
+1681.1s 8 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+1681.8s 9 [NbConvertApp] Writing 2031561 bytes to __results__.html
